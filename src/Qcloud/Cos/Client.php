@@ -52,6 +52,7 @@ class Client extends GuzzleClient {
         $this->cosConfig['retry'] = isset($cosConfig['retry']) ? $cosConfig['retry'] : 1;
         $this->cosConfig['userAgent'] = isset($cosConfig['userAgent']) ? $cosConfig['userAgent'] : 'cos-php-sdk-v5.'. Client::VERSION;
         $this->cosConfig['pathStyle'] = isset($cosConfig['pathStyle']) ? $cosConfig['pathStyle'] : false;
+        $this->cosConfig['host'] = isset($cosConfig['host']) ? $cosConfig['host'] : null;
         
         
         $service = Service::getService();
